@@ -2,11 +2,11 @@ const express = require("express");
 const router = express.Router();
 const {
   getAllProducts,
-  getAllProductsStatics,
+  getAllProductsStatic,
 } = require("../controllers/products");
 const { get } = require("mongoose");
 
 router.route("/").get(getAllProducts);
-router.route("/statics").get(getAllProductsStatics);
+router.route("/static").get(getAllProductsStatic);
 
 module.exports = router;
